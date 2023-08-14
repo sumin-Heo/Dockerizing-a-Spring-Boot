@@ -1,0 +1,14 @@
+name: asac2w
+services:
+  mysql:
+    image: mysql:8.0.32
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: asac2w
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
